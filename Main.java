@@ -34,15 +34,17 @@ public class Main {
 
         System.out.println(CYAN);
         System.out.println("");
-        System.out.println(" _____  ___________  _____ _ \r\n" + //
-                        "|  _  ||  _  | ___ \\/  ___| |\r\n" + //
-                        "| | | || | | | |_/ /\\ `--.| |\r\n" + //
-                        "| | | || | | |  __/  `--. \\ |\r\n" + //
-                        "\\ \\_/ /\\ \\_/ / |    /\\__/ /_|\r\n" + //
-                        " \\___/  \\___/\\_|    \\____/(_)\r\n" + //
-                        "                             \r" + //
-                        "                             ");
-        System.out.println("== A Quiz Bee Simulation Game ==");
+        System.out.println("\t\t\t     ━─━─━━─━━─━─━━─━━─━─━━─━「₪」━━─━─━─━━─━─━━─━━─━─━━─━" + //
+                        "");
+        System.out.println("\t\t\t\t\t _____  ___________  _____ _ \r\n" + //
+                        "\t\t\t\t\t|  _  ||  _  | ___ \\/  ___| |\r\n" + //
+                        "\t\t\t\t\t| | | || | | | |_/ /\\ `--.| |\r\n" + //
+                        "\t\t\t\t\t| | | || | | |  __/  `--. \\ |\r\n" + //
+                        "\t\t\t\t\t\\ \\_/ /\\ \\_/ / |    /\\__/ /_|\r\n" + //
+                        "\t\t\t\t\t \\___/  \\___/\\_|    \\____/(_)\r");
+        System.out.println("\t\t\t\t\t= A Quiz Bee Simulation Game =\n");
+        System.out.print("\t\t\t     ━─━─━━─━━─━─━━─━━─━─━━─━━─━─━━─━━─━─━━─━━─━─━━─━━─━─━" + //
+                        "");
         
         System.out.println(RESET);
 
@@ -51,9 +53,10 @@ public class Main {
 
         // Start with a temporary scientist (will be replaced per-level)
         Scientists placeholderScientist =
-                new Scientists("None", 100, Scientists.Ability.NONE, "Placeholder");
+                new Scientists("None", 50, Scientists.Ability.NONE, "Placeholder");
 
-        Player player = new Player(placeholderScientist);
+        Player player = new Player();   // ✔ original behavior
+        player.setScientist(placeholderScientist); // keep placeholder
 
         GameLevels engine = new GameLevels(player);
 
@@ -70,9 +73,8 @@ public class Main {
                         "| | | || | | |  __/  `--. \\ |\r\n" + //
                         "\\ \\_/ /\\ \\_/ / |    /\\__/ /_|\r\n" + //
                         " \\___/  \\___/\\_|    \\____/(_)\r\n" + //
-                        "                             \r" + //
-                        "                             ");
-        System.out.print("Goodbye!\n" + RESET);
+                        "                             \r");
+        System.out.print("Goodbye!\n\n" + RESET);
 
         sc.close();
     }
