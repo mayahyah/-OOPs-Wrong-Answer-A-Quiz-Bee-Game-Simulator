@@ -632,7 +632,7 @@ public class QuestionBank {
         return q;
     }
 
-    // Create a combined pool of all questions
+    // Combining all questions in one pool
     public static List<Question> allQuestions() {
         List<Question> all = new ArrayList<>();
         all.addAll(biology());
@@ -644,12 +644,16 @@ public class QuestionBank {
         return all;
     }
 
-    // Generate a randomized sublist; if count >= size, return shuffled full list
+    // Question Randomizer
     public static List<Question> generateLevel(List<Question> source, int count) {
-        if (source == null) return new ArrayList<>();
+        if (source == null) {
+            return new ArrayList<>();
+        }
         List<Question> copy = new ArrayList<>(source);
         Collections.shuffle(copy);
-        if (count >= copy.size()) return copy;
+        if (count >= copy.size()) {
+            return copy;
+        }
         return new ArrayList<>(copy.subList(0, count));
     }
 }
