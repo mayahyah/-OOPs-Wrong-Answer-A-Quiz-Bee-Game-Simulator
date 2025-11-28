@@ -27,9 +27,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        // =============================
-        // TITLE SCREEN
-        // =============================
+        //Title Screen
         clearScreen();
 
         System.out.println(CYAN);
@@ -51,18 +49,17 @@ public class Main {
         pressEnter();
         clearScreen();
 
-        // Start with a temporary scientist (will be replaced per-level)
+        // Start with a temporary scientist
         Scientists placeholderScientist =
                 new Scientists("None", 50, Scientists.Ability.NONE, "Placeholder");
-
-        Player player = new Player();   // ✔ original behavior
-        player.setScientist(placeholderScientist); // keep placeholder
+        // original behavior
+        Player player = new Player();  
+        //placeholder
+        player.setScientist(placeholderScientist); 
 
         GameLevels engine = new GameLevels(player);
 
-        // =============================
-        // LEVEL SELECTION / GAME LOOP
-        // =============================
+        // Level Selection
         engine.showLevelMenu();
 
         clearScreen();
@@ -79,3 +76,4 @@ public class Main {
         sc.close();
     }
 }
+
