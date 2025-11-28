@@ -1,8 +1,8 @@
 public class Question {
     private String text;
     private String[] choices;
-    private char correct;      // 'a'..'d'
-    private String category;   // Biology, Physics, Astronomy, etc.
+    private char correct;
+    private String category;
 
     public Question(String text, String[] choices, char correct, String category) {
         this.text = text;
