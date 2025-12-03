@@ -194,12 +194,12 @@ Another is that Darwin also displays what ability he copied for each questions, 
         
 **3.	Scientist Selection**\
 Choose from 6 scientists, each with unique abilities:\
-    •	Galileo Galilei → Astronomy hints\
-    •	Isaac Newton → Skip Physics (2 uses)\
-    •	Charles Darwin → Mimics random ability\
-    •	Sigmund Freud → Reduces 5 questions per level\
-    •	Marie Curie → +30 health at start\
-    •	Ada Lovelace → Heal +5 on correct answers 
+    *•	Galileo Galilei → Astronomy hints\
+    *•	Isaac Newton → Skip Physics (2 uses)\
+    *•	Charles Darwin → Mimics random ability\
+    *•	Sigmund Freud → Reduces 5 questions per level\
+    *•	Marie Curie → +30 health at start\
+    *•	Ada Lovelace → Heal +5 on correct answers 
         
 **4.	Answering Questions**\
     •	Input a, b, c, or d.\
