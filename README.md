@@ -171,7 +171,7 @@ GameLevels Class
     ROLE: Core gameplay controller. Handles:                  
     - Asking questions                                       
     - Level progression                                      
-    - Enemy encounters (level 5 and 10)                      
+    - Boss Level encounters (level 5 and 10)                      
     - Using scientist abilities                              
                                                              
     RESPONSIBILITIES:                                         
@@ -183,9 +183,76 @@ GameLevels Class
     RELATIONSHIPS:                                            
     - Has-a Player                                           
     - Uses Scientists/Darwin through polymorphism  
+Player Class
 
+    ROLE: Stores the player's game data.                      
+                                                             
+    RESPONSIBILITIES:                                         
+    • Store the chosen Scientist/Darwin                      
+    • Track HP, unlocked levels, name, etc.                  
+    • modifyHealth(amount)                                   
+    • addUnlockedLevel(level)                                
+                                                               
+    RELATIONSHIP:                                             
+    - Has-a Scientists (or Darwin) 
+ ScientistAbility Class
 
+    ROLE: Defines behaviors ALL scientists must provide.      
+                                                              
+    METHODS:                                    
+    • useAbility()                                           
+    • resetPerLevel()                                        
+                                                               
+    RELATIONSHIP:                                             
+    - Implemented by Scientists and Darwin 
+Scientists Class
 
+    ROLE: Base scientist class (parent class for all).        
+                                                              
+    DATA:                                                     
+    - ability type                                           
+    - ability description                                    
+    - skipUses                                               
+    - extraLifeGranted                                       
+                                                               
+    RESPONSIBILITIES:                                         
+    • provideAbilityDescription()                            
+    • manage skip, heal, extra life, etc.                    
+                                                              
+    RELATIONSHIP:                                             
+    - Implements ScientistAbility                            
+    - Parent of Darwin Class
+Darwin Class
+
+    ROLE: A unique scientist who copies abilities from others 
+                                                              
+    SPECIAL FEATURE (polymorphism):                           
+    - Overrides useAbility()                                 
+    - Randomly copies another scientist's ability            
+                                                              
+    Inheritance:                                              
+    Darwin extends Scientists but overrides its behavior                     
+                                                               
+    RESPONSIBILITIES:                                         
+    • copyRandomAbility()                                    
+    • store copied ability each question 
+Question Class
+
+    ROLE: Represents a single question to be displayed
+                                                              
+    DATA (about questions):                                                     
+    - the literal question text                                          
+    - choices                                                
+    - correct answer                                         
+                                                               
+    RESPONSIBILITIES:                                         
+    • validateAnswer()  
+QuestionBank Class
+
+    ROLE: Holds lists of questions per level.                 
+                                                             
+    RESPONSIBILITIES:                                         
+    • getQuestionsForLevel(level)                            
 
 ## ***How to Run the Program***
 ### *Prerequisites*
