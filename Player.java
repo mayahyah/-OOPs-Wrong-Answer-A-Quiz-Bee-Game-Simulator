@@ -3,10 +3,17 @@ public class Player {
     private int unlockedLevels = 1;
     private Scientists scientist;
 
-    public int getScore() { return score; }
-    public void addScore(int amount) { score += amount; }
+    public int getScore() { 
+        return score; 
+    }
+    
+    public void addScore(int amount) { 
+        score += amount; 
+    }
 
-    public int getUnlockedLevels() { return unlockedLevels; }
+    public int getUnlockedLevels() { 
+        return unlockedLevels; 
+    }
 
     public boolean isUnlocked(int level) {
         return level <= unlockedLevels;
@@ -24,3 +31,4 @@ public class Player {
         return scientist;
     }
 }
+
