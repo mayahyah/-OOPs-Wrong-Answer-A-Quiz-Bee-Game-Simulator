@@ -241,7 +241,7 @@ Unlocks next level.\
 Congratulations banner after clearing level 10.\
 <img width="680" height="125" alt="image" src="https://github.com/user-attachments/assets/07e08d5c-e138-423b-9e7d-7dad45a59719" />
 
-# ***Author and Acknowledgement***
+## ***Author and Acknowledgement***
 This program is created by **"The Runtime Terrors"** from IT-2103 in compliance with the final project requirement in the course Object-Oriented Programming.
 
 **Lead Programmer:** \
