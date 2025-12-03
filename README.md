@@ -8,6 +8,23 @@ The following are the detailed documentation of how the OOP principal were used 
     private String[] choices;
     private char correct;
     private String category;
+
+    public String getText() {
+        return text;
+    }
+
+    public String[] getChoices() {
+        return choices;
+    }
+
+    public char getCorrect() {
+        return correct;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+    
 The Question.java stays consistent and prevents unwanted modification, keeping data safe and controlled. 
 
     private int score = 0;
