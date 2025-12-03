@@ -152,3 +152,9 @@ This is a general abstraction of a superclass "scientist" from Scientist.java. I
         System.out.println("(Darwin mimics: " + getAbilityName() + ")");
     }
 Since Charles Darwin is a special character with an ability to copy other certain scientists' abilities, the logic of polymorphism was used to deisgn his overall kit. Every Scientist have their own beforeQuestion(), but Darwin has its own unique version to allow him to copy other scientists' abilities. Overriding those abilities allowed Darwin to perform his special ability throughout the game.
+
+    @Override
+    public String getAbilityName() {
+        return "COPIED_" + super.getAbility().name();
+    }
+Another is that Darwin also displays what ability he copied for each questions, hence this override method shown above is necessary for better understanding of the flow of the game when using Darwin.
