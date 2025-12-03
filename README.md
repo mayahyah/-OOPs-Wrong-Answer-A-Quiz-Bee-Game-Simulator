@@ -75,7 +75,7 @@ Private fields from GameLevels.java are fully encapsulated, so they cannot be ac
         this.health += amount;
     }
 
-Applied by keeping the variables name and health private and exposing them only through public methods, which protects the internal data of the character and allows controlled access. 
+In GamaCharacter.java, encapsulation is applied by keeping the variables name and health private and exposing them only through public methods, which protects the internal data of the character and allows controlled access. 
 
 ### *Inheritance*
 
