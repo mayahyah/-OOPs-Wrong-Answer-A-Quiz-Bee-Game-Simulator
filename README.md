@@ -130,3 +130,25 @@ The ScientistAbility interface from ScientistAbility.java declares what abilitie
 This is a general abstraction of a superclass "scientist" from Scientist.java. It includes essential variable details, such as name, health, ability type, and ability description. Yet, it hides unnecessary internal program details such as how skip uses are stored, how extra life flags are managed, and how hint logic is tracked.
 
 ### *Polymorphism*
+    @Override
+    public void beforeQuestion(GameCharacter scientist) {
+        // Darwin changes ability each question
+        Ability[] list = {
+            Ability.HINT,
+            Ability.SKIP_QUESTION,
+            Ability.HEAL
+        };
+
+
+        Ability newA = list[random.nextInt(list.length)];
+        try {
+            java.lang.reflect.Field f = Scientists.class.getDeclaredField("ability");
+            f.setAccessible(true);
+            f.set(this, newA);
+        } 
+        catch (Exception e) {}
+
+
+        System.out.println("(Darwin mimics: " + getAbilityName() + ")");
+    }
+Since Charles Darwin is a special character with an ability to copy other certain scientists' abilities, the logic of polymorphism was used to deisgn his overall kit. Every Scientist have their own beforeQuestion(), but Darwin has its own unique version to allow him to copy other scientists' abilities. Overriding those abilities allowed Darwin to perform his special ability throughout the game.
