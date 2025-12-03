@@ -159,7 +159,33 @@ Since Charles Darwin is a special character with an ability to copy other certai
     }
 Another is that Darwin also displays what ability he copied for each questions, hence this override method shown above is necessary for better understanding of the flow of the game when using Darwin.
 
-## ***Program Structure***
+## ***Program Structure*** 
+Main Class
+
+    - Starts the game                                        
+    - Creates a Player                                       
+    - Creates GameLevels                                     
+    - Calls game.start()     
+GameLevels Class
+
+    ROLE: Core gameplay controller. Handles:                  
+    - Asking questions                                       
+    - Level progression                                      
+    - Enemy encounters (level 5 and 10)                      
+    - Using scientist abilities                              
+                                                             
+    RESPONSIBILITIES:                                         
+    • loadQuestionsForLevel(level)                           
+    • runLevel(level)                                        
+    • applyDamage() / healPlayer()                           
+    • printUnlockedLevels()                                  
+                                                              
+    RELATIONSHIPS:                                            
+    - Has-a Player                                           
+    - Uses Scientists/Darwin through polymorphism  
+
+
+
 
 ## ***How to Run the Program***
 ### *Prerequisites*
