@@ -110,6 +110,19 @@ A class to acquire fields and methods from another class, Darwin class from Darw
 Scientists from Scientists.java extends GameCharacter, meaning it automatically receives all attributes and behaviors of a GameCharacter without rewriting them.
 
 ### *Abstraction*
+public interface ScientistAbility {
+
+    // Called each question 
+    default void beforeQuestion(GameCharacter scientist) {}
+
+    // After question is answered
+    default void onCorrect(GameCharacter scientist) {}
+
+    default void onWrong(GameCharacter scientist) {}
+
+    String getAbilityName();
+
+The ScientistAbility interface from ScientistAbility.java declares what abilities a scientist must have but does not show how each scientist performs them. It forces all scientists (including Darwin and the regular Scientists class) to follow a common contract.
 
     public class Scientists extends GameCharacter implements ScientistAbility {
 
