@@ -158,3 +158,13 @@ Since Charles Darwin is a special character with an ability to copy other certai
         return "COPIED_" + super.getAbility().name();
     }
 Another is that Darwin also displays what ability he copied for each questions, hence this override method shown above is necessary for better understanding of the flow of the game when using Darwin.
+
+## ***Program Structure***
++-----------------------------------------------------------+
+|                        Main (OPTIONAL)                    |
++-----------------------------------------------------------+
+| - Starts the game                                        |
+| - Creates a Player                                       |
+| - Creates GameLevels                                     |
+| - Calls game.start()                                     |
++-----------------------------------------------------------+
