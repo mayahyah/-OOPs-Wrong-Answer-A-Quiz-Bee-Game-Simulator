@@ -44,6 +44,20 @@ Private fields from GameLevels.java are fully encapsulated, so they cannot be ac
     private String name;
     private int health;
 
-    
+    public String getName() {
+        return name;
+    }
 
 
+    public int getHealth() {
+        return health;
+    }
+
+
+    public void modifyHealth(int amount) {
+        this.health += amount;
+    }
+
+Applied by keeping the variables name and health private and exposing them only through public methods, which protects the internal data of the character and allows controlled access. 
+
+### *Inheritance*
