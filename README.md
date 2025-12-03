@@ -78,3 +78,7 @@ Private fields from GameLevels.java are fully encapsulated, so they cannot be ac
 Applied by keeping the variables name and health private and exposing them only through public methods, which protects the internal data of the character and allows controlled access. 
 
 ### *Inheritance*
+
+    public class Darwin extends Scientists {
+    
+A class to acquire fields and methods from another class, Darwin class inherits from the Scientists class and it gains all attributes such as name, health, ability, description, and methods like getAbility(). 
