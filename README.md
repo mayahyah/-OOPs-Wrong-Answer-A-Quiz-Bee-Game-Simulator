@@ -110,7 +110,8 @@ A class to acquire fields and methods from another class, Darwin class from Darw
 Scientists from Scientists.java extends GameCharacter, meaning it automatically receives all attributes and behaviors of a GameCharacter without rewriting them.
 
 ### *Abstraction*
-public interface ScientistAbility {
+
+    public interface ScientistAbility {
 
     // Called each question 
     default void beforeQuestion(GameCharacter scientist) {}
@@ -127,3 +128,5 @@ The ScientistAbility interface from ScientistAbility.java declares what abilitie
     public class Scientists extends GameCharacter implements ScientistAbility {
 
 This is a general abstraction of a superclass "scientist" from Scientist.java. It includes essential variable details, such as name, health, ability type, and ability description. Yet, it hides unnecessary internal program details such as how skip uses are stored, how extra life flags are managed, and how hint logic is tracked.
+
+### *Polymorphism*
