@@ -65,11 +65,9 @@ Private fields from GameLevels.java are fully encapsulated, so they cannot be ac
         return name;
     }
 
-
     public int getHealth() {
         return health;
     }
-
 
     public void modifyHealth(int amount) {
         this.health += amount;
